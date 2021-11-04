@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Runroom\GildedRose\Builders;
-
 
 use Runroom\GildedRose\Item;
 use Runroom\GildedRose\Models\AgedBrie;
@@ -13,8 +11,7 @@ use Runroom\GildedRose\Models\Sulfuras;
 
 class BaseBuilder
 {
-
-    public static function build(Item $item):BaseAbstract
+    public static function build(Item $item): BaseAbstract
     {
         switch ($item->name) {
             case 'Aged Brie':
@@ -27,5 +24,4 @@ class BaseBuilder
                 return new DefaultModel();
         }
     }
-
 }

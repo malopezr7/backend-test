@@ -12,7 +12,6 @@ use Runroom\GildedRose\Models\Sulfuras;
 
 class GildedRose
 {
-
     private array $items;
 
     public function __construct(array $items)

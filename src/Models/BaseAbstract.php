@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Runroom\GildedRose\Models;
-
 
 use Runroom\GildedRose\Item;
 
@@ -18,9 +16,10 @@ abstract class BaseAbstract
 
     protected function decrease(Item $item, bool $isQuality = true): void
     {
-        if ($isQuality)
+        if ($isQuality) {
             $item->quality--;
-        else
+        } else {
             $item->sell_in--;
+        }
     }
 }

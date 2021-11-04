@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Runroom\GildedRose\Models;
-
 
 use Runroom\GildedRose\Item;
 
@@ -20,5 +18,4 @@ class AgedBrie extends BaseAbstract
             $this->increase($item);
         }
     }
-
 }

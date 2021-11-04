@@ -1,14 +1,11 @@
 <?php
 
-
 namespace Runroom\GildedRose\Models;
-
 
 use Runroom\GildedRose\Item;
 
 class DefaultModel extends BaseAbstract
 {
-
     public function updateQuality(Item $item): void
     {
         if ($item->quality > 0) {
