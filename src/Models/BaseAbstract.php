@@ -8,7 +8,7 @@ use Runroom\GildedRose\Item;
 
 abstract class BaseAbstract
 {
-    abstract public function updateQuality(Item $item);
+    abstract public function updateQuality(Item $item): void;
 
 
     protected function increase(Item $item): void

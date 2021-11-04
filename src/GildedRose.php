@@ -2,6 +2,7 @@
 
 namespace Runroom\GildedRose;
 
+use phpDocumentor\Reflection\Types\Mixed_;
 use Runroom\GildedRose\Builders\BaseBuilder;
 use Runroom\GildedRose\Models\AgedBrie;
 use Runroom\GildedRose\Models\Backstage;
@@ -12,22 +13,22 @@ use Runroom\GildedRose\Models\Sulfuras;
 class GildedRose
 {
 
-    private $items;
+    private array $items;
 
-    function __construct($items)
+    public function __construct(array $items)
     {
         $this->items = $items;
     }
 
-    function update_quality()
+    public function update_quality(): void
     {
         foreach ($this->items as $item) {
-           $builder = BaseBuilder::build($item);
-           $this->doUpdate($item, $builder);
+            $builder = BaseBuilder::build($item);
+            $this->doUpdate($item, $builder);
         }
     }
 
-    public function doUpdate(Item $item, BaseAbstract $abstract)
+    protected function doUpdate(Item $item, BaseAbstract $abstract): void
     {
         $abstract->updateQuality($item);
     }

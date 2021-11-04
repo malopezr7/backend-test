@@ -9,7 +9,7 @@ use Runroom\GildedRose\Item;
 class Sulfuras extends BaseAbstract
 {
 
-    public function updateQuality(Item $item)
+    public function updateQuality(Item $item): void
     {
         //doing nothing
     }
